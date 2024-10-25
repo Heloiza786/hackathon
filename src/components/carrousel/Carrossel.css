@@ -1,0 +1,9 @@
+.custom-carousel {
+    width: 40%;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.custom-carousel img {
+    height: 40%;
+}

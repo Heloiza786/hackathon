@@ -1,0 +1,14 @@
+/* Rodape.css */
+.rodape {
+    text-align: center;
+    background-color: darkolivegreen;
+    color: white;
+    padding: 0,5px; /* Aumente ou diminua o valor conforme desejado */
+    font-family: Arial, sans-serif;
+    font-size: 12px; /* Reduza o tamanho da fonte */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+ 

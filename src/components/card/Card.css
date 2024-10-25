@@ -1,0 +1,19 @@
+
+.Container {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  margin: 10% 10% 10% 10%;
+}
+
+.MyImage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ImagemHeading{
+align-items: left;
+}
+.Informacao{
+
+}
