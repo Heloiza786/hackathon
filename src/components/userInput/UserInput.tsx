@@ -24,8 +24,7 @@ async function userDataGet() {
   
 
   await axios.get(userUrl).then((response) => {
-    // O Record serve para poder permitir que a gente traga a chave valor do JSon e coloque no array
-    // Aqui eu estou criando um array através do meu Record, para poder receber os meus valores, que tem que estar do mesmo jeito que está no meu backend.
+
     const dataUser: Record<
       string,
       { name: string; last_name: string; email: string; cpf: string }

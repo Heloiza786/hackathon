@@ -1,0 +1,58 @@
+
+body {
+    background-color: #5876A1; 
+}
+
+.cardLogin {
+    background-color: #ffffff;
+    border: none; 
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    width: 100%; 
+    position: relative;
+}
+
+.circle {
+    width: 100px;
+    height: 100px; 
+    background-color: #007bff;
+    border-radius: 50%; 
+    position: absolute; 
+    top: -50px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.nome, .senha {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 14px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

@@ -8,25 +8,20 @@ function Navibar() {
     var hostName = document.location.pathname.split("/")[2];
 
     switch (hostName) {
-      case "user":
+  
+      case "dadosAluno":
         var resultado =
-          (document.getElementById("user") as HTMLElement) || null;
+          (document.getElementById("dadosAluno") as HTMLElement) || null;
         resultado.classList.add("Link");
         break;
-
-      case "home":
+      case "materias":
         var resultado =
-          (document.getElementById("home") as HTMLElement) || null;
+          (document.getElementById("materias") as HTMLElement) || null;
         resultado.classList.add("Link");
         break;
-      case "products":
+      case "desempenho":
         var resultado =
-          (document.getElementById("products") as HTMLElement) || null;
-        resultado.classList.add("Link");
-        break;
-      case "sales":
-        var resultado =
-          (document.getElementById("sales") as HTMLElement) || null;
+          (document.getElementById("desempenho") as HTMLElement) || null;
         resultado.classList.add("Link");
         break;
 
@@ -39,23 +34,20 @@ function Navibar() {
 
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Navbar</Link>
+        <Link className="navbar-brand" to="/">Icon</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/" id="home">Home</Link>
+              <Link className="nav-link" to="/" id="home"> dadosAluno</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/user" id="user">Vendas</Link>
+              <Link className="nav-link" to="/user" id="user">Matérias</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/products" id="products">Produtos</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/sales" id="sales">Teste</Link>
+              <Link className="nav-link" to="/products" id="products">Desmpenho</Link>
             </li>
           </ul>
         </div>
