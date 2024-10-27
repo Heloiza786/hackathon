@@ -10,6 +10,8 @@ import CardAcess from "./components/cardAcess/cardAcess";
 import Error from "./components/erro/Error";
 import NavBar from "./components/navBar/NavBar";
 import Graphs from "./components/desempenho/Desempenho";
+import PageDadoAluno from "./components/pageDadoAluno/pageDadoAluno";
+import AdmHome from "./components/admHome/admHome";
 // import CardAcess from "./components/cardAcess/cardAcess";
 
 
@@ -24,6 +26,8 @@ root.render(
         <Route path="/login" element={<UserInput />} />
         <Route path="/homeAluno" element={<HomeAlunos />} />
         <Route path="/graficos" element={<Graphs />} />
+        <Route path="/dadosAluno" element={<PageDadoAluno />} />
+        <Route path="/homeAdm" element={<AdmHome />} />
         {/* <Route path="/rotaPrincipal" element={<CardAcess />} /> */}
    
 

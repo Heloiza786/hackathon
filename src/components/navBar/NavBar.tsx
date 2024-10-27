@@ -6,7 +6,7 @@ function NavBar() {
 
   return (
     <nav id="navbar">
-        <i id="nav_logo">Performace Plus</i>
+        <i id="nav_logo">Performance Plus</i>
 
         <ul id="nav_list">
           <li className = "nav-item active">
