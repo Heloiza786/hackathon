@@ -12,6 +12,7 @@ import NavBar from "./components/navBar/NavBar";
 import Graphs from "./components/desempenho/Desempenho";
 import PageDadoAluno from "./components/pageDadoAluno/pageDadoAluno";
 import AdmHome from "./components/admHome/admHome";
+import Sugestoes from "./components/sugestoesPage/SugestoesPage"
 // import CardAcess from "./components/cardAcess/cardAcess";
 
 
@@ -28,6 +29,7 @@ root.render(
         <Route path="/graficos" element={<Graphs />} />
         <Route path="/dadosAluno" element={<PageDadoAluno />} />
         <Route path="/homeAdm" element={<AdmHome />} />
+        <Route path="/sugestoesPage" element={<Sugestoes />} />
         {/* <Route path="/rotaPrincipal" element={<CardAcess />} /> */}
    
 
