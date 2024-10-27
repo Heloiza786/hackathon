@@ -1,62 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #5876A1; 
+  font-family: Arial, sans-serif;
 }
 
-.cardLogin {
-  background-color: rgb(70, 100, 140);
-  border: none; 
-  padding: 50px;
-  max-width: 250px;
-  margin: 150px auto;
-  position: relative;
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #3b5998;
 }
 
-.circle {
-  width: 100px;
-  height: 100px; 
-  background-color: #007bff;
-  border-radius: 50%; 
-  position: absolute; 
-  top: -50px; 
-  left: 50%; 
-  transform: translateX(-50%); 
+.login-box {
+  background-color: #2d4373;
+  padding: 40px; /* Aumentando o padding */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  width: 350px; /* Aumentando a largura */
+  text-align: center;
+}
+
+.profile-icon {
+  width: 70px; /* Aumentando o tamanho do ícone */
+  height: 70px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  margin: 0 auto 25px auto;
 }
 
 .userInputBody {
-  margin-bottom: 20px;
+  margin-bottom: 25px; /* Aumentando o espaço entre os campos */
 }
 
-label {
+.userInputBody label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.1em; /* Aumentando o tamanho da fonte do label */
+  margin-bottom: 8px;
 }
 
-input[type="text"], 
-input[type="password"] {
-  width: 94%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px; /* Slight rounding for inputs */
-  font-size: 14px; /* Increased font size for better readability */
+.input-field {
+  width: 100%;
+  padding: 12px; /* Aumentando o padding do input */
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.1em; /* Aumentando o tamanho da fonte */
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: #cccccc;
 }
 
 .button {
-  margin-top: 10px; /* Space between password and button */
+  margin-top: 25px;
 }
 
-button {
-  background-color: #5876A1; 
-  color: white;
-  padding: 10px; /* Adjusted padding for better appearance */
-  border: none;
-  border-radius: 4px; /* Rounded corners for button */
-  cursor: pointer;
+.login-button {
   width: 100%;
-  font-size: 16px;
+  padding: 12px; /* Aumentando o padding do botão */
+  background-color: #4864a3;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em; /* Aumentando o tamanho da fonte do botão */
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: rgb(70, 100, 140);
+.login-button:hover {
+  background-color: #36538a;
 }
-

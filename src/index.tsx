@@ -9,6 +9,7 @@ import UserInput from "./components/login/Login";
 import CardAcess from "./components/cardAcess/cardAcess";
 import Error from "./components/erro/Error";
 import NavBar from "./components/navBar/NavBar";
+import Graphs from "./components/desempenho/Desempenho";
 // import CardAcess from "./components/cardAcess/cardAcess";
 
 
@@ -21,8 +22,8 @@ root.render(
     <BrowserRouter basename="/pi">
       <Routes>
         <Route path="/login" element={<UserInput />} />
-        <Route path="/homeAlunos" element={<HomeAlunos />} />
-        
+        <Route path="/homeAluno" element={<HomeAlunos />} />
+        <Route path="/graficos" element={<Graphs />} />
         {/* <Route path="/rotaPrincipal" element={<CardAcess />} /> */}
    
 
