@@ -8,19 +8,34 @@
   overflow: hidden;
 }
 
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px; /* mexe aqui ♥ */
+  margin-top: 140px;
+}
+
+.text-container {
+  background-color: white;
+  width: 650px;
+  height: 550px;
+  border-radius: 32px;
+}
+
 .centralizar-graphs-container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 140px;
+
 }
 
 .background-image-container {
   position: absolute;
   background-color: white;
-  width: 650px;
-  height: 500px;
+  width: 650px; /*largura */
+  height: 550px; /*altura */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -102,22 +102,27 @@ const Graphs: React.FC = () => {
   return (
     <div>
     <Navibar />
-    <div className="centralizar-graphs-container">
-      <div className="background-image-container">
-        {/* <img src={whiteBoard} alt="background" className="background-image" /> */}
+    <div className="main-container">
+      <div className="text-container">
+        
       </div>
-      <div className="centralizar-graphs">
-        <div ref={chartRef}></div>
+      <div className="centralizar-graphs-container">
+        <div className="background-image-container">
+          {/* <img src={whiteBoard} alt="background" className="background-image" /> */}
+        </div>
+        <div className="centralizar-graphs">
+          <div ref={chartRef}></div>
 
-        {/* Modal para o popup */}
-        {showPopup && selectedSubject && (
-          <Modal onClose={() => setShowPopup(false)}>
-            <h2>{selectedSubject} - Desempenho ao longo dos bimestres</h2>
-            <MiniGraph data={bimesterData} />
-          </Modal>
-        )}
-    </div>
+          {/* Modal para o popup */}
+          {showPopup && selectedSubject && (
+            <Modal onClose={() => setShowPopup(false)}>
+              <h2>{selectedSubject} - Desempenho ao longo dos bimestres</h2>
+              <MiniGraph data={bimesterData} />
+            </Modal>
+          )}
       </div>
+    </div>
+    </div>
       <Rodape />
     </div>
   );

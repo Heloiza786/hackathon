@@ -70,7 +70,6 @@ body {
 
 @media screen and (max-width: 600px) {
     body {
-        background-color: rgb(0, 255, 34, 0.938);
         color: aliceblue;
     }
 
