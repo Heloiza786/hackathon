@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css"
 import axios from "axios";
-import UserIput from './Login';
+import UserIput from "./Login";
 import CardAcess from "../cardAcess/cardAcess";
 
 
@@ -55,23 +55,27 @@ function UserInput() {
   return (
     <div className="userInputMain">
       <div className="cardLogin">
-        {/* <div className="circle"></div> */}
+        {<div className="circle"></div> }
         <form onSubmit={(e) => { e.preventDefault(); userDataGet(); }}>
 
-          <div className="userInputBody">
-            <label>Nome:</label>
-            <input type="text" placeholder="Nome" id="userName" />
-          </div>
-          <div className="userInputBody">
-            <label>Senha:</label>
-            <input type="password" placeholder="Senha" id="userSenhaInput" />
-          </div>
-          <br />
-          <div className="button">
-            <button type="button" onClick={CardAcess}>Login</button>
+        <div className="login-container">
+            <div className="login-box">
+                <div className="profile-icon"></div>
+                <form>
+                    <div className="userInputBody">   
+                        <input type="text" placeholder="Nome" id="userName" className="input-field" />
+                    </div>
+                    <div className="userInputBody">
+                        <input type="password" placeholder="Senha" id="userSenhaInput" className="input-field" />
+                    </div>
+                    <br />
+                    <div className="button">
+                        <button type="button" onClick={CardAcess} className="login-button">Login</button>
+                    </div>
+                </form>
+            </div>
           </div>
         </form>
-        <br />
       </div>
     </div>
   );

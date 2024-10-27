@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://localhost:9000/pi/",
   "dependencies": {
+    "@salesforce/apex-node": "^8.1.15",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -13,11 +14,13 @@
     "@types/react-dom": "^18.2.13",
     "axios": "^1.6.0",
     "bootstrap": "^5.3.3",
+    "prettier-plugin-apex": "^2.1.5",
     "react": "^18.2.0",
+    "react-apexcharts": "^1.4.4",
     "react-dom": "^18.2.0",
     "react-router": "^6.17.0",
     "react-router-dom": "^6.17.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "^6.1.13",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
