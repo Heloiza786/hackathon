@@ -1,31 +1,97 @@
-.cardSugestao {
+.dashboard {
     display: flex;
-    justify-content: center; /* Alinha os quadros ao centro */
-    align-items: flex-start; /* Alinha os quadros no topo */
-    margin: 80px 80px; /* Margem superior e inferior de 80px, lateral de 80px */
-    flex-wrap: wrap; /* Permite que os quadros quebrem em uma nova linha se necessário */
-    background-color: white; /* Fundo branco para o container */
-    padding: 20px; /* Espaçamento interno do container */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-}
-
-.iconSugestao {
-    margin-bottom: 100px;
-}
-
-.iconSugestao img {
-    width: 50px; /* Ajuste conforme necessário */
-    height: 50px; /* Ajuste conforme necessário */
-}
-
-.quadro {
-    background-color: #ffffff; /* Fundo branco para cada quadro */
-    border: 1px solid #ccc; /* Borda cinza */
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 50px;
-    margin: 50px; /* Margem ao redor de cada quadro */
-    width: 280px; /* Ajuste a largura conforme necessário */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    text-align: center; /* Texto centralizado */
-}
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5; /* Fundo branco para toda a área principal */
+    min-height: 100vh;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .dashboard-nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .dashboard-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .student-button {
+    background-color: #a0bcd6;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 60px; /* Espaço maior entre os cards */
+    margin-top: 200px;
+    padding: 0 100px; /* Espaçamento lateral */
+    justify-content: center;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px; /* Aumenta o espaço interno */
+    width: 300px; /* Aumenta a largura do card */
+    height: 350px; /* Aumenta a altura do card */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra destacada */
+    text-align: center;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease; /* Transição suave para efeito hover */
+  }
+  
+  .card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+  }
+  
+  .icon {
+    font-size: 60px; /* Aumenta o tamanho do ícone */
+    margin-bottom: 20px;
+  }
+  
+  .card h2 {
+    font-size: 20px; /* Aumenta o tamanho do título */
+    margin: 15px 0;
+  }
+  
+  .card p {
+    font-size: 16px; /* Aumenta o tamanho do texto */
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .access-button {
+    background-color: #a0bcd6;
+    border: none;
+    padding: 12px 24px; /* Aumenta o botão */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transição suave para efeito hover */
+  }
+  
+  .access-button:hover {
+    background-color: #254661;
+  }
