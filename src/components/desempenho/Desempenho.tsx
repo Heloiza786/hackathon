@@ -55,11 +55,7 @@ const Graphs: React.FC = () => {
           data: [10, 55, 75, 25, 30, 85, 40, 95, 50, 55, 25, 65]
         }],
         xaxis: {
-          categories: [
-            'Artes', 'Educação Física', 'Filosofia', 'Sociologia', 'Inglês',
-            'Física', 'Química', 'Biologia', 'Geografia', 'História',
-            'Matemática', 'Língua Portuguesa'
-          ],
+          categories: Object.keys(subjectsPerformance),
           labels: {
             style: {
               fontFamily: 'Arial, sans-serif',
@@ -101,28 +97,38 @@ const Graphs: React.FC = () => {
 
   return (
     <div>
-    <Navibar />
-    <div className="main-container">
-      <div className="text-container">
-        
-      </div>
-      <div className="centralizar-graphs-container">
-        <div className="background-image-container">
-          {/* <img src={whiteBoard} alt="background" className="background-image" /> */}
+      <Navibar />
+      <div className="main-container">
+        {/* Boletim listado à esquerda */}
+        <div className="text-container">
+          <h1 className="boletim">Boletim</h1>
+          <ul className="boletim-list">
+            {Object.entries(subjectsPerformance).map(([subject, scores]) => (
+              <li key={subject}>
+                {subject}: {scores[0]}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="centralizar-graphs">
-          <div ref={chartRef}></div>
+        
+        {/* Gráfico à direita com popups para detalhes */}
+        <div className="centralizar-graphs-container">
+          <div className="background-image-container">
+            <img src={whiteBoard} alt="background" className="background-image" />
+          </div>
+          <div className="centralizar-graphs">
+            <div ref={chartRef}></div>
 
-          {/* Modal para o popup */}
-          {showPopup && selectedSubject && (
-            <Modal onClose={() => setShowPopup(false)}>
-              <h2>{selectedSubject} - Desempenho ao longo dos bimestres</h2>
-              <MiniGraph data={bimesterData} />
-            </Modal>
-          )}
+            {/* Modal para o popup com detalhes do bimestre */}
+            {showPopup && selectedSubject && (
+              <Modal onClose={() => setShowPopup(false)}>
+                <h2>{selectedSubject} - Desempenho ao longo dos bimestres</h2>
+                <MiniGraph data={bimesterData} />
+              </Modal>
+            )}
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
       <Rodape />
     </div>
   );
