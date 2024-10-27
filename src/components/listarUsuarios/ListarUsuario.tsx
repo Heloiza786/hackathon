@@ -1,5 +1,5 @@
 import React from "react";
-import Navibar from "../navibar/Navibar";
+import NavBar from "../navBar/NavBar";
 import CardUser from "../cardUser/CardUser";
 
 
@@ -9,7 +9,7 @@ function ListarUsuario() {
   return (
 
     <div>
-      <Navibar />
+      <NavBar />
       <CardUser />
     </div>
   )

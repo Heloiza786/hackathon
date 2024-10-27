@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import "./navbarAna.css";
+import "./NavBar.css";
 // import rodape from "../rodape/Rodape";
 
-function NavibarAna() {
+function NavBar() {
 
   return (
     <nav id="navbar">
@@ -27,4 +27,4 @@ function NavibarAna() {
   );
 }
 
-export default NavibarAna;
+export default NavBar;

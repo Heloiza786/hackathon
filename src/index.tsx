@@ -4,12 +4,11 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/homeLogin/Home";
-import UserInput from "./components/userInput/UserInput";
+import HomeAlunos from "./components/homeAlunos/HomeAlunos";
+import UserInput from "./components/login/Login";
 import CardAcess from "./components/cardAcess/cardAcess";
 import Error from "./components/erro/Error";
-import NavibarAna from "./navbarAna/navbarAna";
-
+import NavBar from "./components/navBar/NavBar";
 // import CardAcess from "./components/cardAcess/cardAcess";
 
 
@@ -21,11 +20,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename="/pi">
       <Routes>
-        <Route path="/dadosAluno" element={<Home />} />
-        <Route path="/dadosAlunos" element={<UserInput />} />
-    
-        <Route path="/homeAluno" element={<CardAcess />} />
-       
+        <Route path="/login" element={<UserInput />} />
+        <Route path="/homeAlunos" element={<HomeAlunos />} />
         
         {/* <Route path="/rotaPrincipal" element={<CardAcess />} /> */}
    

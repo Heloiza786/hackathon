@@ -1,7 +1,7 @@
 import React from "react";
-import "./UserInput.css";
+import "./Login.css"
 import axios from "axios";
-import UserIput from '../userInput/UserInput';
+import UserIput from './Login';
 import CardAcess from "../cardAcess/cardAcess";
 
 
