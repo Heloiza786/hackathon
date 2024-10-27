@@ -23,9 +23,9 @@ async function userDataGet() {
     localStorage.setItem("token", dataUser.token);
 
     if (dataUser.is_admin) {
-      window.location.href = "/homeAdmin";
+      window.location.href = "/Home_professor";
     } else {
-      window.location.href = "/homeAlunos";
+      window.location.href = "/Home_aluno";
     }
 
     // const userArray = Object.entries(dataUser).map(([key, value]) => ({
