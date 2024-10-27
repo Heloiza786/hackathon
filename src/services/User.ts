@@ -6,7 +6,7 @@ import "../components/cardUser/CardUser.css"
 
 
 
-const Url = "http://localhost:9000/api/users";
+const Url = "http://localhost:3000/api/users";
 
 async function getUsers(divId: HTMLDivElement) {
     await axios.get(Url).then((response) => {

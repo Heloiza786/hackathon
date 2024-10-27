@@ -18,26 +18,34 @@ async function userDataGet() {
 
   try {
     const response = await axios.get(userUrl);
-    const dataUser: Record<string, { name: string; password: string }> = response.data;
+    const dataUser: { token: string, is_admin: boolean } = response.data;
 
-    const userArray = Object.entries(dataUser).map(([key, value]) => ({
-      key,
-      ...value,
-    }));
+    localStorage.setItem("token", dataUser.token);
 
-    userArray.forEach((i) => {
-      const newDiv = document.createElement("div");
-      newDiv.innerHTML = `
-        <div>
-          Nome: ${i.name}</br>
-        </div>
-        <div>
-          Sobrenome: ${i.password}</br> 
-        </div>
-        </br>
-      `;
-      document.body.appendChild(newDiv);
-    });
+    if (dataUser.is_admin) {
+      window.location.href = "/homeAdmin";
+    } else {
+      window.location.href = "/homeAlunos";
+    }
+
+    // const userArray = Object.entries(dataUser).map(([key, value]) => ({
+    //   key,
+    //   ...value,
+    // }));
+
+    // userArray.forEach((i) => {
+    //   const newDiv = document.createElement("div");
+    //   newDiv.innerHTML = `
+    //     <div>
+    //       Nome: ${i.name}</br>
+    //     </div>
+    //     <div>
+    //       Sobrenome: ${i.password}</br> 
+    //     </div>
+    //     </br>
+    //   `;
+    //   document.body.appendChild(newDiv);
+    // });
   } catch (error) {
     console.error("Error fetching user data", error);
   }
