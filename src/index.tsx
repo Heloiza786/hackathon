@@ -4,7 +4,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/home/Home";
+import Home from "./components/desempenho/Desempenho";
 import Products from "./components/products/Products";
 import Sales from "./components/sales/Sales";
 import User from "./components/user/User";

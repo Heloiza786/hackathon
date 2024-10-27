@@ -7,6 +7,7 @@ function ListarProdutos() {
         <div>
             <Navibar />
             <CardProdutos />
+            
         </div>
     )
 }
