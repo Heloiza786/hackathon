@@ -1,51 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css"
 import axios from "axios";
-import UserIput from "./Login";
-import CardAcess from "../cardAcess/cardAcess";
 
-
-async function userDataGet() {
+async function userDataGet(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
   const userNameInput = document.getElementById("userName") as HTMLInputElement | null;
   const userSenhaInput = document.getElementById("userSenhaInput") as HTMLInputElement | null;
 
-  const userUrl = "http://localhost:9000/api/users";
+  const userUrl = "http://localhost:5002/api/auth/login";
 
-  const userDataJason = {
+  const userDataJson = {
     userName: userNameInput?.value,
     password: userSenhaInput?.value,
   };
 
   try {
-    const response = await axios.get(userUrl);
-    const dataUser: { token: string, is_admin: boolean } = response.data;
-
+    const response = await axios.post(userUrl, userDataJson);
+    const dataUser: { token: string, isAdmin: boolean } = response.data;
+    console.log(dataUser)
     localStorage.setItem("token", dataUser.token);
 
-    if (dataUser.is_admin) {
-      window.location.href = "/Home_professor";
+    if (dataUser.isAdmin) {
+      window.location.href = "/homeAdm";
     } else {
-      window.location.href = "/Home_aluno";
+      var idAluno = await axios.post("http://localhost:5002/api/User", {}, { headers: { Authorization: `Bearer ${dataUser.token}`  }});
+      localStorage.setItem("idUsuario", idAluno.data)
+      window.location.href = "/homeAlunos";
     }
 
-    // const userArray = Object.entries(dataUser).map(([key, value]) => ({
-    //   key,
-    //   ...value,
-    // }));
-
-    // userArray.forEach((i) => {
-    //   const newDiv = document.createElement("div");
-    //   newDiv.innerHTML = `
-    //     <div>
-    //       Nome: ${i.name}</br>
-    //     </div>
-    //     <div>
-    //       Sobrenome: ${i.password}</br> 
-    //     </div>
-    //     </br>
-    //   `;
-    //   document.body.appendChild(newDiv);
-    // });
   } catch (error) {
     console.error("Error fetching user data", error);
   }
@@ -55,24 +37,22 @@ function UserInput() {
   return (
     <div className="userInputMain">
       <div className="cardLogin">
-        {<div className="circle"></div> }
-        <form onSubmit={(e) => { e.preventDefault(); userDataGet(); }}>
+        {<div className="circle"></div>}
+        <form onSubmit={(e) => userDataGet(e)}>
 
-        <div className="login-container">
+          <div className="login-container">
             <div className="login-box">
-                <div className="profile-icon"></div>
-                <form>
-                    <div className="userInputBody">   
-                        <input type="text" placeholder="Nome" id="userName" className="input-field" />
-                    </div>
-                    <div className="userInputBody">
-                        <input type="password" placeholder="Senha" id="userSenhaInput" className="input-field" />
-                    </div>
-                    <br />
-                    <div className="button">
-                        <button type="button" onClick={CardAcess} className="login-button">Login</button>
-                    </div>
-                </form>
+              <div className="profile-icon"></div>
+              <div className="userInputBody">
+                <input type="text" placeholder="Nome" id="userName" className="input-field" />
+              </div>
+              <div className="userInputBody">
+                <input type="password" placeholder="Senha" id="userSenhaInput" className="input-field" />
+              </div>
+              <br />
+              <div className="button">
+                <button type="submit" className="login-button">Login</button>
+              </div>
             </div>
           </div>
         </form>
@@ -81,4 +61,4 @@ function UserInput() {
   );
 }
 
-export default UserInput;
+export default UserInput

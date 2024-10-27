@@ -23,7 +23,7 @@ root.render(
     <BrowserRouter basename="/pi">
       <Routes>
         <Route path="/login" element={<UserInput/>} />
-        <Route path="/homeAlunos" element={<HomeAlunos/>} />
+        <Route path="/homeAluno" element={<HomeAlunos/>} />
         <Route path="/DadosAluno" element={<DadosAluno/>} />
         <Route path="/graficos" element={<Graphs />} />
         {/* <Route path="/rotaPrincipal" element={<CardAcess />} /> */}
