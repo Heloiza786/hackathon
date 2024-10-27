@@ -25,7 +25,7 @@ async function userDataGet(e: React.FormEvent<HTMLFormElement>) {
     } else {
       var idAluno = await axios.post("http://localhost:5002/api/User", {}, { headers: { Authorization: `Bearer ${dataUser.token}`  }});
       localStorage.setItem("idUsuario", idAluno.data)
-      window.location.href = "/homeAlunos";
+      window.location.href = "/pi/homeAluno";
     }
 
   } catch (error) {
