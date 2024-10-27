@@ -1,0 +1,62 @@
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 80px;
+    height: 40px;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+  }
+  
+  .nav {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav-link {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .nav-link.active {
+    text-decoration: underline;
+  }
+  
+  .btn-dados-aluno {
+    background-color: #6c87ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .student-table th,
+  .student-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .row-gray {
+    background-color: #d3d3d3;
+  }

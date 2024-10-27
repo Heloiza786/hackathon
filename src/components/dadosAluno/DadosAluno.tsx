@@ -1,41 +1,34 @@
-import React from 'react';
-import './DadosAluno.css';
+import React from "react";
+import "./DadosAluno.css"
 
-const AlunoData: React.FC = () => {
+const DadosAluno = () => {
   return (
-    <div className="aluno-data">
-      <header className="navbar">
-        <span className="navbar-item">Início</span>
-        <span className="navbar-item">Sugestões</span>
-        <span className="navbar-item">Desempenho</span>
-        <button className="navbar-item active">Dados do Aluno</button>
-      </header>
 
-      <div className="aluno-info">
-        <div className="aluno-avatar"></div>
-        <h1>Nome do Aluno - MATRÍCULA</h1>
-
-        <form className="aluno-form">
-          <label>Email:</label>
-          <input type="text" placeholder="Email:" disabled />
-
-          <label>Telefone 1:</label>
-          <input type="text" placeholder="Telefone 1: " disabled />
-
-          <label>Telefone 2:</label>
-          <input type="text" placeholder="Telefone 2: " disabled />
-
-          <label>Endereço:</label>
-          <input type="text" placeholder="Endereço: " disabled />
-
-          <label>Série:</label>
-          <input type="text" placeholder="Série: " disabled />
-        </form>
-
-        <button className="back-button">Voltar</button>
+    <div className="container">
+      <div className="student-info">
+        <h1 className="student-name">Nome do Aluno</h1>
       </div>
+
+      <div className="form">
+        <label>Email:</label>
+        <input type="text" disabled />
+
+        <label>Telefone 1:</label>
+        <input type="text" disabled />
+
+        <label>Telefone 2:</label>
+        <input type="text" disabled />
+
+        <label>Endereço:</label>
+        <input type="text" disabled />
+
+        <label>Série:</label>
+        <input type="text" disabled />
+      </div>
+
+      <button className="back-button">Voltar</button>
     </div>
   );
 };
 
-export default AlunoData;
+export default DadosAluno;
