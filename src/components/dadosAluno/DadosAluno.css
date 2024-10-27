@@ -18,6 +18,10 @@
   color: #333;
 }
 
+.background-color {
+  background-color: #ffffff;
+}
+
 .navbar-item.active {
   color: #ffffff;
   font-weight: bold;
