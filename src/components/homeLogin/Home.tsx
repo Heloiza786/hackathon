@@ -1,20 +1,22 @@
 import React from "react";
-import Card from "../card/Card";
+// import CardAcess from "../cardAcess/cardAcess";
 
 import Navibar from "../navibar/Navibar";
-import Login from "../login/Login";
+import NavibarAna from "../../navbarAna/navbarAna";
+import CardAcess from "../cardAcess/cardAcess";
 import Rodape from "../rodape/Rodape";
-
- 
-// import Fundo from "../../imagem/fundo.png";
-// import '../Home.css'
 
 function Home() {
   return (
     <div>
-      <Navibar/>
-      <Login />
-      <Rodape />
+      {/* <Navibar/> */}
+      {/* <Login /> */}
+      <NavibarAna />
+      <CardAcess></CardAcess>
+      {/* <Navibar></Navibar> */}
+ 
+      {/* <CardAcess /> */}
+      {/* <Rodape /> */}
 
     </div>
   

@@ -13,17 +13,17 @@
   padding: 15px;
   font-family: "URW Gothic L", "sans-serif";
   text-decoration: none;
-  border: none; /* Remove qualquer borda existente */
-  border-bottom: 2px solid rgb(113, 175, 43); /* Adiciona borda inferior */
-  margin: 0 10px; /* Adiciona margens laterais para espaçamento */
+  border: none; 
+  border-bottom: 2px solid rgb(113, 175, 43); 
+  margin: 0 10px;
 }
 
-/* Para centralizar os títulos */
-.Nav h1, .Nav h2, .Nav h3 { /* Ajuste para o nível de título que você está usando */
-  flex: 15; /* Permite que o título ocupe espaço no flex container */
-  text-align: center; /* Centraliza o texto */
-  color: rgb(113, 175, 43); /* Cor do texto do título, caso deseje */
-  margin: 10; /* Remove margens padrão */
+
+.Nav h1, .Nav h2, .Nav h3 {
+  flex: 15;
+  text-align: center; 
+  color: rgb(113, 175, 43); 
+  margin: 10; 
 }
 
 

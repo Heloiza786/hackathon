@@ -1,0 +1,31 @@
+.cardSugestao {
+    display: flex;
+    justify-content: center; /* Alinha os quadros ao centro */
+    align-items: flex-start; /* Alinha os quadros no topo */
+    margin: 80px 80px; /* Margem superior e inferior de 80px, lateral de 80px */
+    flex-wrap: wrap; /* Permite que os quadros quebrem em uma nova linha se necessário */
+    background-color: white; /* Fundo branco para o container */
+    padding: 20px; /* Espaçamento interno do container */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.iconSugestao {
+    margin-bottom: 100px;
+}
+
+.iconSugestao img {
+    width: 50px; /* Ajuste conforme necessário */
+    height: 50px; /* Ajuste conforme necessário */
+}
+
+.quadro {
+    background-color: #ffffff; /* Fundo branco para cada quadro */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 50px;
+    margin: 50px; /* Margem ao redor de cada quadro */
+    width: 280px; /* Ajuste a largura conforme necessário */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center; /* Texto centralizado */
+}

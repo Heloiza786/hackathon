@@ -5,9 +5,13 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/homeLogin/Home";
-import User from "./components/user/User";
+import UserInput from "./components/userInput/UserInput";
+import CardAcess from "./components/cardAcess/cardAcess";
 import Error from "./components/erro/Error";
-import ListarUsuario from "./components/listarUsuarios/ListarUsuario";
+import NavibarAna from "./navbarAna/navbarAna";
+
+// import CardAcess from "./components/cardAcess/cardAcess";
+
 
 
 const root = ReactDOM.createRoot(
@@ -17,13 +21,15 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename="/pi">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dadosAluno" element={<User />} />
-        {/* <Route path="/materias" element={<Products />} /> */}
-        {/* <Route path="/desempenho" element={<Sales />} /> */}
-        {/* <Route path="/listarUsuario" element={<ListarUsuario />} />
-        <Route path="/listarProdutos" element={<ListarProdutos />} />
-        <Route path="/listarSales" element={<ListarSales />} /> */}
+        <Route path="/dadosAluno" element={<Home />} />
+        <Route path="/dadosAlunos" element={<UserInput />} />
+    
+        <Route path="/homeAluno" element={<CardAcess />} />
+       
+        
+        {/* <Route path="/rotaPrincipal" element={<CardAcess />} /> */}
+   
+
         <Route path="*" element={<Error/>}/>
       </Routes>
     </BrowserRouter>
