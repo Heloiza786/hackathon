@@ -9,6 +9,7 @@ import UserInput from "./components/login/Login";
 import CardAcess from "./components/cardAcess/cardAcess";
 import Error from "./components/erro/Error";
 import NavBar from "./components/navBar/NavBar";
+import DadosAluno from "./components/dadosAluno/DadosAluno";
 // import CardAcess from "./components/cardAcess/cardAcess";
 
 
@@ -20,9 +21,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename="/pi">
       <Routes>
-        <Route path="/login" element={<UserInput />} />
-        <Route path="/homeAlunos" element={<HomeAlunos />} />
-        
+        <Route path="/login" element={<UserInput/>} />
+        <Route path="/homeAlunos" element={<HomeAlunos/>} />
+        <Route path="/DadosAluno" element={<DadosAluno/>} />
+
         {/* <Route path="/rotaPrincipal" element={<CardAcess />} /> */}
    
 
